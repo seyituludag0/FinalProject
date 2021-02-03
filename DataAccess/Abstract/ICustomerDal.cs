@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Entities;
 using Entities.Concrete;
 
 namespace DataAccess.Abstract
 {
-    public interface IProductDal:IEntityRepository<Product>
+    public interface ICustomerDal:IEntityRepository<Customer>
     {
-       
     }
 }
