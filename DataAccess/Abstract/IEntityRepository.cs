@@ -6,8 +6,10 @@ using Entities.Abstract;
 
 namespace DataAccess.Abstract
 {
-    // generic constraint
-    // class: referans tip
+    //generic constraint
+    //class : referans tip
+    //IEntity : IEntity olabilir veya IEntity implemente eden bir nesne olabilir
+    //new() : new'lenebilir olmalı
     public interface IEntityRepository<T> where T : class, IEntity, new()
     {
         List<T> GetAll(Expression<Func<T, bool>> filter = null);
