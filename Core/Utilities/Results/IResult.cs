@@ -4,7 +4,6 @@ using System.Text;
 
 namespace Core.Utilities.Results
 {
-    //Temel başlangıçlar için voidler
     public interface IResult
     {
         bool Success { get; }
