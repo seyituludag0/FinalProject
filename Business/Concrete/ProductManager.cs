@@ -30,10 +30,10 @@ namespace Business.Concrete
             return new DataResult<Product>(_productDal.Get(p => p.ProductId == id), true, Messages.ProductListed);
         }
 
+
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
-
             _productDal.Add(product);
 
             return new SuccessResult(Messages.ProductAdded);
