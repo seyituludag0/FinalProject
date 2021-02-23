@@ -13,5 +13,4 @@ namespace Entities.DTOs
         public string CategoryName { get; set; }
         public int UnitsInStock { get; set; }
     }
-
 }
