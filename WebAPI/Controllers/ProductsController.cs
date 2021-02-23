@@ -27,7 +27,7 @@ namespace WebAPI.Controllers
         // Güncelleme işlemi ve Delete işlemi için NoContent(204)
         // Ekleme işlemi için Created(201)
         [HttpGet("getall")]
-        public IActionResult Get()
+        public IActionResult GetAll()
         {
             var result = _productService.GetAll();
             if (result.Success)
@@ -61,6 +61,19 @@ namespace WebAPI.Controllers
 
             return BadRequest(result);
 
+        }
+
+
+        [HttpGet("productdetails")]
+        public IActionResult GetToyDetails()
+        {
+            var result = _productService.GetProductDetails();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result.Message);
         }
     }
 }
