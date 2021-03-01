@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Core.Entities;
 
-namespace Entities.DTOs
+namespace Entities.Dtos
 {
     public class ProductDetailDto:IDto
     {
