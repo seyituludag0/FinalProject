@@ -69,8 +69,8 @@ namespace Business.Concrete
         public IResult Add(Product product)
         {
             IResult result = BusinessRules.Run(CheckIfProductCountOfCategoryCorrect(product.CategoryId),
-                 CheckIfProductNameExists(product.ProductName),CheckIfCategoryLimitExceded());
-            if (result!=null)
+                 CheckIfProductNameExists(product.ProductName), CheckIfCategoryLimitExceded());
+            if (result != null)
             {
                 return result;
             }
