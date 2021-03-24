@@ -70,7 +70,7 @@ namespace Business.Concrete
             return new DataResult<Product>(_productDal.Get(p => p.ProductId == id), true, Messages.ProductListed);
         }
 
-        //[SecuredOperation("product.admin,admin")]
+        [SecuredOperation("product.admin,admin")]
         [ValidationAspect(typeof(ProductValidator))]
         [CacheRemoveAspect("IProductService.Get")]
         public IResult Add(Product product)
